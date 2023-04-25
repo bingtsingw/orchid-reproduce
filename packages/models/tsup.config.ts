@@ -6,7 +6,7 @@ export default defineConfig((options) => {
     format: 'cjs',
     splitting: false,
     sourcemap: true,
-    dts: true,
+    dts: false,
     clean: true,
     minify: !options.watch,
   };

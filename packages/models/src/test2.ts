@@ -1,6 +1,6 @@
-import { BaseTable } from './_base';
+import { BaseTable, BaseTable2 } from './_base';
 
-export class TestTable extends BaseTable {
+export class TestTable2 extends BaseTable2 {
   readonly table = 'test';
 
   columns = this.setColumns((t) => ({

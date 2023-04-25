@@ -2,13 +2,18 @@ import { createId } from '@paralleldrive/cuid2';
 import { createBaseTable } from 'orchid-orm';
 
 export const BaseTable = createBaseTable({
+  snakeCase: true,
+
   columnTypes: (t) => ({
     ...t,
-    text: (min = 0, max = Infinity) => t.text(min, max),
-    cuid: () =>
-      t
-        .varchar(36)
-        .primaryKey()
-        .default(() => createId()),
+  }),
+});
+
+export const BaseTable2 = createBaseTable({
+  snakeCase: true,
+
+  columnTypes: (t) => ({
+    ...t,
+    varchar: (length: number = 255) => t.varchar(length),
   }),
 });

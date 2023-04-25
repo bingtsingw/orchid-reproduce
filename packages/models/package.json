@@ -1,14 +1,20 @@
 {
-  "name": "@acme/db-models",
+  "name": "models",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf dist",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "demo": "ts-node ./index.ts"
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.0",
-    "orchid-orm": "^1.9.10"
+    "orchid-orm": "^1.9.10",
+    "pg": "^8.10.0",
+    "pqb": "^0.11.8"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
   }
 }
